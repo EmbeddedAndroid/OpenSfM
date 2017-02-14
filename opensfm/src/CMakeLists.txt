@@ -77,7 +77,7 @@ target_link_libraries(akaze ${OpenCV_LIBS})
 # VLFeat
 include_directories(third_party/vlfeat)
 file(GLOB VLFEAT_SRCS third_party/vlfeat/vl/*.c third_party/vlfeat/vl/*.h)
-add_definitions(-DVL_DISABLE_AVX)
+add_definitions(-DVL_DISABLE_AVX -DVL_DISABLE_SSE2)
 add_library(vl ${VLFEAT_SRCS})
 
 
